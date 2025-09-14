@@ -1,1 +1,14 @@
+#include <iostream>
+using namespace std;
 
+/*1 задача*/
+
+void main()
+{
+	setlocale(LC_ALL, "ru");
+
+	int a[3]{ 31,18,79 };
+	string b = " ";
+
+	cout << a[0] << b << a[1] << b << a[2] << endl;
+}
