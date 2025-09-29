@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+/*5 задача*/
+
+int a = 0;
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+
+	cout << "Введите число: ";
+	cin >> a;
+	cout << "Вы ввели число: " << a << endl;
+	return 0;
+}
