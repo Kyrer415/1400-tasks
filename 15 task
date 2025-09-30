@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+/*10 задача*/
+
+
+
+int main()
+{
+
+	setlocale(LC_ALL, "Russian");
+    int a, b, c, d;
+    cout << "Введите четыре числа: ";
+    cin >> a >> b >> c >> d;
+    cout << a << "  " << b << "  " << c << "  " << d << endl;
+	return 0;
+}
