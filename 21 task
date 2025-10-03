@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    setlocale(LC_ALL, "Russian");
+    double x, y;
+
+    cout << "Введите значение x: ";
+    cin >> x;
+
+    y = 17 * x * x - 6 * x + 13;
+
+    cout << "Значение функции y = 17x^2 - 6x + 13 при x = " << x << " равно: " << y << std::endl;
+
+    return 0;
+}
