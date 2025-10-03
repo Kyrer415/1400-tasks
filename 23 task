@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    setlocale(LC_ALL, "Russian");
+    double a, result;
+
+    cout << "Введите значение a: ";
+    cin >> a;
+
+    result = (a * a + 10) / sqrt(a * a + 1);
+
+    cout << "Значение функции (a^2 + 10) / sqrt(a^2 + 1) при a = " << a << " равно: " << result << endl;
+
+    return 0;
+}
