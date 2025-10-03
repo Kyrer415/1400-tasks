@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+/*16 задача*/
+
+
+
+int main()
+{
+
+    setlocale(LC_ALL, "Russian");
+    cout << "a) 5 10" << "\tб) 100 t" << "\tв) x 25" << endl << "   7 см" << "\t   1949 v" << "\t   x y" << endl;
+    return 0;
+}
