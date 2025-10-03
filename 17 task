@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+/*16 задача*/
+
+
+
+int main()
+{
+
+    setlocale(LC_ALL, "Russian");
+    int a, b, x, y;
+    cout << "Введите значение a:";
+    cin >> a;
+    cout << endl << "Введите значение b:";
+    cin >> b;
+    cout << endl << "Введите значение x:";
+    cin >> x;
+    cout << endl << "Введите значение y:";
+    cin >> y;
+    cout << "a) 2 кг" << "\t\tб) "<<a<<" 1" << "\t\tв) "<<x<<" "<<y<< endl << "   13 17" << "\t   19 "<<b<<  "\t\t   5 "<<y<<" "<< endl;
+    return 0;
+}
