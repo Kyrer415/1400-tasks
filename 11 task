@@ -13,6 +13,6 @@ int main()
 	string a;
 	cout << "Введите имя: ";
 	cin >> a;
-	cout << a << endl;
+	cout << a << "-это чемпион!"<< endl;
 	return 0;
 }
