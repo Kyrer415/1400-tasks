@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	
+	double a, result;
+	
+	cout << "Введите значение a: ";
+	cin >> a;
+	
+	result = sqrt((a*a + sin(fabs(3*a)))/ (3,56));
+	    cout << "Значение функции при a = " << a << " равно: " << result << endl;
+	
+	return 0;
+	}
