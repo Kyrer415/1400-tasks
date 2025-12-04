@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    const double r = 6350000;
+    double h;
+    cout << "Введите высоту над землёй(в метрах): ";
+    cin >> h;
+
+        double d = sqrt(2 * r * h + h * h); // Точная формула
+        cout << "Расстояние до горизонта: " << d << " метров" << endl;
+        cout << "или " << d / 1000 << " километров" << endl;
+
+    return 0;
+}
