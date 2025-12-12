@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath> 
+
+using namespace std;
+
+int main() {
+    double x, y, a, b;
+    double z, x_func; 
+
+    //а: z = 2x^3 - 3.44xy + 2.3x^2 - 7.1y + 2
+    cout << "Введите значения x и y для части (а): ";
+    cin >> x >> y;
+
+    z = 2 * pow(x, 3) - 3.44 * x * y + 2.3 * pow(x, 2) - 7.1 * y + 2;
+    cout << "Значение функции z = " << z << endl;
+
+    // б: x = 3.14(a + b)^3 + 2.75b^2 - 12.7a - 4.1
+    cout << "Введите значения a и b для части (б): ";
+    cin >> a >> b;
+
+    x_func = 3.14 * pow(a + b, 3) + 2.75 * pow(b, 2) - 12.7 * a - 4.1;
+    cout << "Значение функции x = " << x_func << endl;
+
+    return 0;
+}
