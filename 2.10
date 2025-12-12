@@ -1,0 +1,53 @@
+#include <iostream>
+#include <cmath>
+#include <list>
+#include <locale>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    double y, a, b;
+    double z;
+    list<double> slist;
+    int value;
+
+    cout << "Введите числа (для завершения введите 0): \n";
+    while (true) {
+        cin >> value;
+
+        if (value == 0) {
+            break;
+        }
+        slist.push_back(value);
+    }
+
+    size_t n = slist.size(); 
+
+    if (n == 0) {
+        cout << "Список пуст!" << endl;
+        return 1;
+    }
+
+    double sum = 0.0;
+    for (const auto& num : slist) {
+        sum += num;
+    }
+    double arithmetic_mean = sum / n;
+
+    double product = 1.0;
+    for (const auto& num : slist) {
+        if (num <= 0) {
+            cout << "Ошибка: число <= 0 (геометрическое среднее не определено)" << endl;
+            return 1;
+        }
+        product *= num;
+    }
+
+    double geometric_mean = pow(product, 1.0 / n);
+
+    cout << "Арифметическое: " << arithmetic_mean << endl;
+    cout << "Геометрическое: " << geometric_mean << endl;
+
+    return 0;
+}
