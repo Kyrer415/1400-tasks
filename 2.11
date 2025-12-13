@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+#include <list>
+#include <locale>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    //Известны объем и масса тела. Определить плотность материала этого тела.
+    int p, m, V;
+
+    cout << "Введите оъём тела(м^3):" << endl;
+    cin >> V;
+    cout << "Введите массу тела(кг):" << endl;
+    cin >> m;
+
+    p = m / V;
+    cout << "Плотность материала этого тела равна(кг/м^3):" << p << endl;
+
+    return 0;
+}
