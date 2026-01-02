@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+  double a, b, c, z, x, v;
+    cout << "Введите катеты a и b: ";
+    cin >> a >> b;
+
+    if (a <= 0) {
+        cout << "Ошибка: коэффициент a не должен быть меньше либо равно нулю!" << std::endl;
+        return 1;
+    }
+
+    double c;
+    z = a * a;
+    x = b * b;
+    v = z + x;
+    c = sqrt(v);
+
+    cout << "Гипотенуза равна:" << c << std::endl;
+
+    return 0;
+}
