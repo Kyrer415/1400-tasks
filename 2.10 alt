@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double a, b;
+    cout << "Введите два числа: ";
+    cin >> a >> b;
+
+    double arith_mean = (a + b) / 2.0;
+    double geom_mean = sqrt(a * b);
+
+    cout << "Среднее арифметическое: " << arith_mean << endl;
+    cout << "Среднее геометрическое: " << geom_mean << endl;
+
+    return 0;
+}
