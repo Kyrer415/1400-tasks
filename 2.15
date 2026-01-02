@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+  double R, r;
+    cout << "Введите внешний радиус кольца (R): ";
+    cin >> R;
+    cout << "Введите внутренний радиус кольца (r): ";
+    cin >> r;
+
+    if (R <= r) {
+        cout << "Ошибка: внешний радиус должен быть больше внутреннего!" << std::endl;
+        return 1;
+    }
+
+    double area = M_PI * (R * R - r * r);
+    cout << "Площадь кольца: " << area << std::endl;
+    return 0;
+}
