@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std
+
+double calculate_x(double a, double b) {
+    return 3.14 * pow(a + b, 3) + 2.75 * pow(b, 2) - 12.7 * a - 4.1;
+}
+
+int main() {
+    double a, b;
+    std::cout << "Введите значение a: ";
+    std::cin >> a;
+    std::cout << "Введите значение b: ";
+    std::cin >> b;
+
+    double x = calculate_x(a, b);
+    std::cout << "Значение функции x = " << x << std::endl;
+
+    return 0;
+}
