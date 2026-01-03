@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+double e, f, g, h;
+    cout << "Введите число:" << endl;
+    cin >> e;
+    cout << "Введите число:" << endl;
+    cin >> f;
+
+    g = fabs(e);
+    h = fabs(f);
+
+    double arith_mean = (g + h) / 2.0;
+    double geom_mean = sqrt(g * h);
+
+    cout << "Геометрическое чисел равно:" << geom_mean << endl << "Арифметическое чисел равно:" << arith_mean << endl;
+
+
+    return 0;
+}
