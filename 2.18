@@ -18,7 +18,7 @@ int main() {
     
     double q = 7.25 * sin(x - fabs(y));
 
-    cout << "Значение z: " << z << std::endl;
-    cout << "Значение q: " << q << std::endl;
+    cout << "Значение z: " << z << endl;
+    cout << "Значение q: " << q << endl;
     return 0;
 }
