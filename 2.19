@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+ double a, b;
+    cout << "Введите значение a: ";
+    cin >> a;
+    cout << "Введите значение b: ";
+    cin >> b;
+
+    double denominator_x1 = a * a + 25;
+    double denominator_x2 = sqrt(b + (a + b) / 2);
+    double x = (2 / denominator_x1) + (b / denominator_x2);
+
+    double numerator_y = fabs(a) + 2 * sin(b);
+    double denominator_y = 5.5 * a;
+    double y = numerator_y / denominator_y;
+
+    cout << "Значение x: " << x << endl;
+    cout << "Значение y: " << y << endl;
+    return 0;
+}
