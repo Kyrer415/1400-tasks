@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+double a, b;
+    cout << "Введите первое число: ";
+    cin >> a;
+    cout << "Введите второе число: ";
+    cin >> b;
+    double sum = a + b;
+    double diff = a - b;
+    double product = a * b;
+    double quotient;
+    if (b != 0) {
+        quotient = a / b;
+    } else {
+        cout << "Ошибка: деление на ноль!" << endl;
+        return 1;
+    }
+
+    cout << "Сумма: " << sum << endl;
+    cout << "Разность: " << diff << endl;
+    cout << "Произведение: " << product << endl;
+    cout << "Частное: " << quotient << endl;
+    return 0;
+}
