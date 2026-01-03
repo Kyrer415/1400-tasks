@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+double a, b, g, h;
+    cout << "Введите сторону a:" << endl;
+    cin >> a;
+    cout << "Введите сторону b:" << endl;
+    cin >> b;
+
+    g = a + b + a + b;
+    h = sqrt(a * a + b * b);
+
+    cout << "Периметр прямоугольника равен:" << g << endl << "Длина диагонали прямоугольника равна:" << h << endl;
+
+
+    return 0;
+}
