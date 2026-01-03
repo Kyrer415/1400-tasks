@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+ double a, b, h;
+    cout << "Введите длины оснований трапеции (a и b): ";
+    cin >> a >> b;
+    cout << "Введите высоту трапеции (h): ";
+    cin >> h;
+
+    double d = fabs(a - b) / 2.0;
+    double c = sqrt(h * h + d * d); 
+    double P = a + b + 2 * c; 
+
+    cout << "Периметр трапеции: " << P << std::endl;
+
+    return 0;
+}
