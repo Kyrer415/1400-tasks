@@ -1,0 +1,74 @@
+#include <windows.h>
+#include <iostream>
+
+// Функция для имитации нажатия клавиши
+void pressKey(WORD key) {
+    KEYBDINPUT kbInput = {};
+    kbInput.wVk = key;
+    kbInput.dwFlags = 0;
+    INPUT input = {};
+    input.type = INPUT_KEYBOARD;
+    input.ki = kbInput;
+    SendInput(1, &input, sizeof(INPUT));
+
+    // Отпускание клавиши
+    kbInput.dwFlags = KEYEVENTF_KEYUP;
+    input.ki = kbInput;
+    SendInput(1, &input, sizeof(INPUT));
+}
+
+int main() {
+    std::cout << "Программа запущена. Нажмите F6 для активации.\n";
+    std::cout << "Нажмите F7 для выхода.\n";
+
+    bool isActive = false;
+    bool pressOneNext = true; // Флаг для чередования: сначала 1, потом 2
+
+    while (true) {
+        // Проверка нажатия F6 — активация
+        if (GetAsyncKeyState(VK_F6) & 0x8000) {
+            isActive = !isActive; // Переключаем состояние
+            if (isActive) {
+                std::cout << "Режим активирован. Удерживается ЛКМ.\n";
+                // Удерживаем ЛКМ
+                mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+            } else {
+                std::cout << "Режим деактивирован. ЛКМ отпущена.\n";
+                // Отпускаем ЛКМ
+                mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+                pressOneNext = true; // Сбрасываем чередование
+            }
+            Sleep(300); // Защита от многократного срабатывания
+        }
+
+        // Проверка нажатия F7 — выход из программы
+        if (GetAsyncKeyState(VK_F7) & 0x8000) {
+            break;
+        }
+
+        // Если режим активен, выполняем действия
+        if (isActive) {
+            if (pressOneNext) {
+                pressKey('1');
+                std::cout << "Нажата клавиша 1\n";
+            } else {
+                pressKey('2');
+                std::cout << "Нажата клавиша 2\n";
+            }
+
+            // Меняем флаг для следующего цикла
+            pressOneNext = !pressOneNext;
+
+            // Ждём 1.5 секунды (1500 мс)
+            Sleep(1500);
+        }
+    }
+
+    // Перед выходом отпускаем ЛКМ, если он был удержан
+    if (isActive) {
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+    }
+
+    std::cout << "Программа завершена.\n";
+    return 0;
+}
